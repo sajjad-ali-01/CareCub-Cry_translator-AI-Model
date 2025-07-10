@@ -1,5 +1,6 @@
 # Baby Cry Translator - Model Training and Conversion
 
+
 ## Overview
 
 This repository contains the code for training a machine learning model to classify infant cries into different categories (belly pain, burping, discomfort, hungry, tired, and other). The trained model is then converted to TensorFlow Lite (TFLite) format for deployment in a mobile application.
