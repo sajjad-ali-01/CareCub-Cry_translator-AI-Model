@@ -1,6 +1,6 @@
 # Baby Cry Translator - Model Training and Conversion
 
-
+---
 ## Overview
 
 This repository contains the code for training a machine learning model to classify infant cries into different categories (belly pain, burping, discomfort, hungry, tired, and other). The trained model is then converted to TensorFlow Lite (TFLite) format for deployment in a mobile application.
@@ -16,14 +16,14 @@ The model uses a transfer learning approach with the following components:
 2. **Custom Classification Head**:
    - Dense layer with 256 units (ReLU activation)
    - Final dense layer with 6 units (one per class)
-
+---
 ## Dataset
 
 - Total samples: 1055
 - Training samples: 844
 - Validation samples: 105
 - Test samples: 106
-
+---
 ## Training Process
 
 - Model trained for 150 epochs with early stopping (patience=9)
@@ -31,14 +31,14 @@ The model uses a transfer learning approach with the following components:
 - Loss: Sparse Categorical Crossentropy
 - Batch size: 32
 - Final validation accuracy: ~34.35%
-
+---
 ## Model Conversion to TFLite
 
 The trained model is converted to TFLite format with:
 - Default optimizations
 - Supported ops: TFLITE_BUILTINS and SELECT_TF_OPS
 - Saved as `final_model.tflite`
-
+---
 ## Usage
 
 ### Requirements
@@ -46,7 +46,7 @@ The trained model is converted to TFLite format with:
 - TensorFlow Hub
 - TensorFlow I/O
 - NumPy
-
+- 
 ### Steps to Run
 
 1. Prepare your dataset in the following structure:
@@ -61,7 +61,7 @@ The trained model is converted to TFLite format with:
    ```
 2. download the dataset folder Aug_data that have baby cry labeled data
 3. Run the training notebook `yumnet_infant_Cry.ipynb`
-
+---
 3. The notebook will:
    - Preprocess the audio data
    - Train the model
@@ -69,7 +69,7 @@ The trained model is converted to TFLite format with:
    - Convert to TFLite format
 
 4. The final TFLite model will be saved as `final_model.tflite`
-
+---
 ## Mobile App Integration
 
 To integrate the TFLite model with your mobile app:
@@ -81,13 +81,13 @@ To integrate the TFLite model with your mobile app:
    - Preprocess input audio (resample to 16kHz mono, same as training)
    - Run inference
    - Interpret the output probabilities
-
+---
 ### Input Requirements
 - Audio should be:
   - Mono channel
   - 16kHz sample rate
   - Same length as training data (padded if necessary)
-
+---
 ### Output Interpretation
 The model outputs probabilities for 6 classes:
 1. belly_pain
@@ -96,14 +96,30 @@ The model outputs probabilities for 6 classes:
 4. hungry
 5. tired
 6. Other
-
+---
 ## Performance Notes
 
 - The model achieves moderate accuracy on the validation set
 - Consider collecting more diverse data to improve performance
 - The TFLite model is optimized for mobile deployment
+---
+## 👨‍💻 Author
 
-## License
+**Sajjad Ali**
+📧 \[[sajjad.218ali@gmail.com](mailto:sajjad.218ali@gmail.com)]
+🔗 [LinkedIn Profile](https://linkedin.com/in/sajjadali116)
+
 ---
 
-For questions or issues, please open an issue in this repository.
+## 💬 Contributions
+
+Contributions, issues, and feature requests are welcome!
+Feel free to open an issue or submit a pull request.
+
+---
+
+## ⭐️ Star This Repo
+
+If you find this project useful, please give it a ⭐️ to help others discover it.
+
+---
