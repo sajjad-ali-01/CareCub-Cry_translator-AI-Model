@@ -30,7 +30,7 @@ The model uses a transfer learning approach with the following components:
 - Optimizer: Adam
 - Loss: Sparse Categorical Crossentropy
 - Batch size: 32
-- Final validation accuracy: ~34.35%
+- Final validation accuracy: ~84.35%
 ---
 ## Model Conversion to TFLite
 
